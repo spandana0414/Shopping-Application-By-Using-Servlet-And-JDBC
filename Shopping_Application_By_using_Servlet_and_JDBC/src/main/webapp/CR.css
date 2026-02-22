@@ -1,0 +1,165 @@
+@charset "UTF-8";
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                    url('https://static.vecteezy.com/system/resources/previews/003/689/228/original/online-registration-or-sign-up-login-for-account-on-smartphone-app-user-interface-with-secure-password-mobile-application-for-ui-web-banner-access-cartoon-people-illustration-vector.jpg');
+        background-size: cover;
+        background-position: center;
+        animation: backgroundAnim 25s infinite alternate;
+    }
+
+    @keyframes backgroundAnim {
+        0% {
+            background-position: 0% 50%;
+            background-size: 100% auto;
+        }
+        50% {
+            background-size: 110% auto;
+        }
+        100% {
+            background-position: 100% 50%;
+            background-size: 100% auto;
+        }
+    }
+
+    .mainCon {
+        background: rgba(255, 255, 255, 0.97);
+        padding: 2rem 3rem;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        width: 90%;
+        max-width: 500px;
+        transform: translateY(0);
+        opacity: 0;
+        animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        margin-top: 2vw;
+    }
+
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+            transform: translateY(-20px);
+        }
+    }
+
+    .head {
+        text-align: center;
+        color: #2c3e50;
+        margin-bottom: 1.5rem;
+        font-size: 2.2em;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+    }
+
+    tr {
+        margin-bottom: 1.5rem;
+        display: block;
+    }
+
+    td {
+        padding: 12px 0;
+        vertical-align: middle;
+    }
+
+    td:first-child {
+        color: #2c3e50;
+        font-weight: 600;
+        padding-right: 15px;
+        width: 40%;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="password"] {
+        width: 100%;
+        padding: 12px 15px;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        font-size: 16px;
+        transition: all 0.3s ease;
+        background: rgba(255,255,255,0.9);
+    }
+
+    input:focus {
+        outline: none;
+        border-color: #3498db;
+        box-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
+        transform: scale(1.02);
+    }
+
+    .sub {
+        width: 60%;
+        padding: 14px;
+        background: linear-gradient(45deg, #3498db, #2c3e50);
+        border: none;
+        border-radius: 8px;
+        color: white;
+        font-size: 1.1em;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin: 2rem auto 0;
+        display: block;
+        letter-spacing: 0.5px;
+    }
+
+    .sub:hover {
+        transform: translateY(-2px) scale(1.02);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    }
+
+    .sub:active {
+        transform: translateY(0) scale(0.98);
+    }
+
+    a {
+        display: block;
+        text-align: center;
+        margin-top: 1.5rem;
+        color: #2c3e50;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+
+    a:hover {
+        color: #3498db;
+        transform: translateY(-1px);
+    }
+
+    @media (max-width: 480px) {
+        .mainCon {
+            padding: 1.5rem;
+            margin: 1rem;
+        }
+        
+        .head {
+            font-size: 1.8em;
+        }
+        
+        td {
+            display: block;
+            width: 100% !important;
+            padding: 8px 0;
+        }
+        
+        .sub {
+            width: 80%;
+            padding: 12px;
+        }
+    }

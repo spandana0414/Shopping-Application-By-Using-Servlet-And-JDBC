@@ -1,0 +1,168 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                url('https://t3.ftcdn.net/jpg/04/28/75/80/360_F_428758061_ek11EXglWYZylVDnSwPmGGoSJYZ4firA.jpg');
+    background-size: cover;
+    background-position: center;
+    animation: backgroundPan 20s linear infinite;
+}
+
+@keyframes backgroundPan {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.mainCon {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem 3rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    width: 90%;
+    max-width: 500px;
+    transform: translateY(0);
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(-20px);
+    }
+}
+
+.head h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-size: 2.2em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.tail {
+    margin-top: 1.5rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr {
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+td {
+    padding: 12px 0;
+}
+
+td:first-child {
+    color: #2c3e50;
+    font-weight: 600;
+    padding-right: 15px;
+    width: 30%;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background: rgba(255,255,255,0.9);
+    height: 45px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
+    transform: scale(1.02);
+}
+
+.button-cell {
+    display: flex;
+    gap: 15px;
+    margin-top: 1rem;
+}
+
+.sub, .reg-btn {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+}
+
+.sub {
+    background: linear-gradient(45deg, #3498db, #2c3e50);
+    color: white;
+}
+
+.reg-btn {
+    background: linear-gradient(45deg, #2c3e50, #34495e);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sub:hover, .reg-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.sub:active, .reg-btn:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 480px) {
+    .mainCon {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+    
+    .head h1 {
+        font-size: 1.8em;
+    }
+    
+    tr {
+        margin-bottom: 1rem;
+    }
+    
+    td {
+        display: block;
+        width: 100% !important;
+        padding: 8px 0;
+    }
+    
+    input[type="text"],
+    input[type="password"] {
+        padding: 10px 12px;
+        height: 42px;
+    }
+    
+    .button-cell {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

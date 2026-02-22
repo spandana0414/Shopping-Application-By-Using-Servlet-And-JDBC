@@ -1,0 +1,153 @@
+@charset "UTF-8";
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+        }
+
+        nav {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            padding: 1rem 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-weight: bold;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .admin-link {
+            background-color: #27ae60;
+        }
+
+        .admin-link:hover {
+            background-color: #2ecc71;
+        }
+
+        .customer-link {
+            background-color: #2980b9;
+        }
+
+        .customer-link:hover {
+            background-color: #3498db;
+        }
+        
+
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .nav-links {
+                width: 100%;
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .nav-link {
+                text-align: center;
+            }
+            
+        }
+        .content-wrapper {
+            display: flex;
+            max-width: 1200px;
+            margin: 50px auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .image-container {
+            flex: 1;
+            min-height: 400px;
+            
+            /*background: url('https://courses.smeclabs.com/wp-content/uploads/2023/05/JAVA-Full-Stack-Developer.png') center/cover no-repeat;*/
+        }
+        
+        .description-container {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 2.2rem;
+        }
+        
+        p {
+            margin-bottom: 25px;
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+        
+        .highlight {
+            color: #e74c3c;
+            font-weight: 600;
+        }
+        
+        .features {
+            margin: 20px 0;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+        
+        .feature-icon {
+            color: #27ae60;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 768px) {
+            .content-wrapper {
+                flex-direction: column;
+                margin: 20px;
+            }
+            
+            .image-container {
+                min-height: 250px;
+            }
+        }

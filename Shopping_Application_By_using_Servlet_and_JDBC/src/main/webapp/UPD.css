@@ -1,0 +1,151 @@
+/* ProductDetails.css */
+
+/* Base Styles */
+body {
+    margin: 0;
+    padding: 15px;
+    min-height: 100vh;
+    background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)),
+                url('https://www.pngmart.com/files/11/Online-Portal-E-Commerce-PNG-Clipart.png');
+    background-size: cover;
+    background-position: center;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main Container */
+.main-container {
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 25px;
+    max-width: 900px;
+    width: 90%;
+    display: flex;
+    gap: 25px;
+    min-height: auto;
+    overflow: visible;
+}
+
+/* Image Container */
+.product-image-container {
+    flex: 1;
+    min-width: 300px;
+    max-height: 400px;
+    display: flex;
+    align-items: center;
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+/* Form Container */
+.form-container {
+    flex: 1;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Header */
+.header h1 {
+    color: #2c3e50;
+    font-size: 2em;
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* Form Elements */
+.update-form table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 12px;
+}
+
+.update-form td {
+    padding: 10px;
+    vertical-align: middle;
+}
+
+.update-form input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 2px solid #3498db;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+/* Submit Button */
+.submit-btn {
+    background: #27ae60;
+    color: #fff !important;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1em;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.submit-btn:hover {
+    background: #219a52;
+    transform: translateY(-1px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+    }
+    
+    .product-image-container {
+        max-width: 300px;
+        max-height: 300px;
+    }
+    
+    .header h1 {
+        font-size: 1.8em;
+        margin: 5px 0;
+    }
+    
+    .update-form td {
+        padding: 8px;
+    }
+    
+    .submit-btn {
+        padding: 10px 20px;
+        font-size: 0.95em;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-container {
+        padding: 15px;
+    }
+    
+    .product-image-container {
+        max-height: 250px;
+    }
+    
+    .header h1 {
+        font-size: 1.6em;
+    }
+    
+    .update-form input {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+}
